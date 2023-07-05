@@ -92,11 +92,11 @@ $ kubectl exec postgres-<POD_IDENTIFIER> --stdin --tty -- createdb -U postgres b
 Build and push the image to Docker Hub:
 
 ```sh
-$ docker build -t mjhea0/flask-kubernetes ./services/server
-$ docker push mjhea0/flask-kubernetes
+$ docker build -t bnikanjam/flask-kubernetes ./services/server
+$ docker push bnikanjam/flask-kubernetes
 ```
 
-> Make sure to replace `mjhea0` with your Docker Hub namespace in the above commands as well as in *kubernetes/flask-deployment.yml*
+> Make sure to replace `bnikanjam` with your Docker Hub namespace in the above commands as well as in _kubernetes/flask-deployment.yml_
 
 Create the deployment:
 
@@ -127,7 +127,7 @@ $ minikube addons enable ingress
 $ kubectl apply -f ./kubernetes/minikube-ingress.yml
 ```
 
-Add entry to */etc/hosts* file:
+Add entry to _/etc/hosts_ file:
 
 ```
 <MINIKUBE_IP> hello.world
@@ -138,19 +138,18 @@ Try it out:
 1. [http://hello.world/books/ping](http://hello.world/books/ping)
 1. [http://hello.world/books](http://hello.world/books)
 
-
 #### Vue
 
 Build and push the image to Docker Hub:
 
 ```sh
-$ docker build -t mjhea0/vue-kubernetes ./services/client \
+$ docker build -t bnikanjam/vue-kubernetes ./services/client \
     -f ./services/client/Dockerfile-minikube
 
-$ docker push mjhea0/vue-kubernetes
+$ docker push bnikanjam/vue-kubernetes
 ```
 
-> Again, replace `mjhea0` with your Docker Hub namespace in the above commands as well as in *kubernetes/vue-deployment.yml*
+> Again, replace `bnikanjam` with your Docker Hub namespace in the above commands as well as in _kubernetes/vue-deployment.yml_
 
 Create the deployment:
 
