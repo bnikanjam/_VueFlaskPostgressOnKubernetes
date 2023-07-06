@@ -1,10 +1,4 @@
-# Running Flask on Kubernetes
-
-## Want to learn how to build this?
-
-Check out the [post](https://testdriven.io/running-flask-on-kubernetes).
-
-## Want to use this project?
+# Deploying Vue WebUI, Flask backend REST-Api backed by PostgreSQL on Kubernetes
 
 ### Docker
 
@@ -164,3 +158,9 @@ $ kubectl create -f ./kubernetes/vue-service.yml
 ```
 
 Try it out at [http://hello.world/](http://hello.world/).
+
+
+
+## Acknowledgme
+
+Check out the [post](https://testdriven.io/running-flask-on-kubernetes).
